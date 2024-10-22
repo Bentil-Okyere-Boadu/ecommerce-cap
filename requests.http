@@ -1,0 +1,43 @@
+## General endpoints
+### Get Products
+GET http://localhost:4004/products/Products
+
+### Login
+POST http://localhost:4004/login/login
+Content-Type: application/json
+Authorization: Basic user:user1234
+
+
+## USER
+
+### Get user
+GET http://localhost:4004/users/Users(123e4567-e89b-12d3-a456-426614174003)
+Content-Type: application/json
+Authorization: Basic user:user1234
+
+
+
+
+## VENDOR
+
+
+
+## ADMIN
+### Admin add user
+POST http://localhost:4004/users/Users
+Content-Type: application/json
+Authorization: Basic admin:admin1234
+
+{
+  "firstName": "Kamala",
+  "lastName": "Harris",
+  "password": "kamalaHarris"
+}
+
+
+
+
+
+
+
+
