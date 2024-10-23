@@ -1,1 +1,4 @@
 ID,firstName,lastName,email,password,role,createdAt,createdBy,modifiedAt,modifiedBy
+"123e4567-e89b-12d3-a456-426655440000","John","Doe","john.doe@example.com","password123",user
+"223e4567-e89b-12d3-a456-426655440000","Jane","Admin","jane.admin@example.com","password123",admin
+"323e4567-e89b-12d3-a456-426655440000","Bob","Smith","bob.smith@example.com","password123",user

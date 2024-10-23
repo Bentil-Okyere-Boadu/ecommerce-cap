@@ -1,1 +1,5 @@
 ID,name,price,category,createdAt,createdBy,modifiedAt,modifiedBy
+"123e4567-e89b-12d3-a456-426655440000","Apple iPhone",999,"Electronics"
+"223e4567-e89b-12d3-a456-426655440000","Samsung TV",1299,"Electronics"
+"323e4567-e89b-12d3-a456-426655440000","Nike Shoes",99,"Fashion"
+"423e4567-e89b-12d3-a456-426655440000","Sony Headphones",199,"Electronics"
