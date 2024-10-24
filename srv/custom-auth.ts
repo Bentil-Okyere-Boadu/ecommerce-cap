@@ -2,12 +2,12 @@ import {Request, Response, NextFunction} from "express";
 import jwt from "jsonwebtoken";
 import { User } from '../src/utils/types';
 
-type Req = Request & { user: User, tenant: string };
+type Req = Request & { user: User, tenant?: string };
 
 export default function custom_auth(req: Req, res: Response, next: NextFunction){
     try {
 
-        if (req.path === "/login" ) {
+        if (req.path === "/login" ||  req.baseUrl === "/products") {
          return next();
         }
 
