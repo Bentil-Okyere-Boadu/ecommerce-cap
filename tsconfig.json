@@ -9,6 +9,8 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "allowJs": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "paths": {
       "#cds-models/*": [
         "./@cds-models/*/index.ts"
