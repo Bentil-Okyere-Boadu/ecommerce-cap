@@ -1,17 +1,17 @@
+import "reflect-metadata";
 import { Service } from "typedi";
 import { Handler, Srv, Req, Action } from "cds-routing-handlers";
 import { Request } from "@sap/cds"
 import { comparePassword } from "../../utils/password";
 import { User } from "#cds-models/ecommerce";
+import { generateToken } from "../../utils/token";
 
 @Service()
-// @Handler()
+@Handler()
 export class LoginHandler {
-    // @Action('login')
-
-    public async login ( srv: any, req: Request ) {
+    @Action("login")
+    public async login (@Srv() srv: any, @Req() req: Request) {
         const { email, password } = req.data;
-        console.log(req.data)
         try {
             const user = await SELECT.one.from(User.name).where({email});
             if(!user) {
@@ -29,7 +29,9 @@ export class LoginHandler {
                 lastName: user.lastName,
                 role: user.role
             }
-            return { message: "Login successful", user }
+
+            const token = generateToken(data);
+            return { message: "Login successful", user: { token: token, ...user} }
 
         } catch(err) {
             return req.error(500, "Login failed")
