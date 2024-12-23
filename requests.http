@@ -2,10 +2,31 @@
 ### Get Products
 GET http://localhost:4004/products/Products
 
-### Login
-POST http://localhost:4004/login/login
+### Create Product
+POST http://localhost:4004/products/createProduct
 Content-Type: application/json
-Authorization: Basic user:user1234
+Authorization: Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFkNjJmNWRjLTkyZjgtNGJjNC04ZmU0LTBmN2U0MzQ2ODg1NyIsImZpcnN0TmFtZSI6IkFETUlOIiwibGFzdE5hbWUiOiJBRE1JTiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNDk5MDMwMH0.jbtLId_PtuWaKWYJaH1YQbhlNU5X1MoLiLrbIkeITM8
+
+{
+    "name": "Golden Tree",
+    "price": 50,
+    "category": "Chocolate"
+}
+
+### Login
+POST http://localhost:4004/auth/login
+Content-Type: application/json
+
+{
+    "email":"admin@admin.com",
+    "password":"admin123"
+}
+
+### Get logged in user
+GET http://localhost:4004/auth/loggedInUser
+Content-Type: application/json
+Authorization: Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFkNjJmNWRjLTkyZjgtNGJjNC04ZmU0LTBmN2U0MzQ2ODg1NyIsImZpcnN0TmFtZSI6IkFETUlOIiwibGFzdE5hbWUiOiJBRE1JTiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNDk5MDMwMH0.jbtLId_PtuWaKWYJaH1YQbhlNU5X1MoLiLrbIkeITM8
+
 
 
 ## USER
@@ -13,10 +34,20 @@ Authorization: Basic user:user1234
 ### Get user
 GET http://localhost:4004/users/Users(123e4567-e89b-12d3-a456-426614174003)
 Content-Type: application/json
-Authorization: Basic user:user1234
+Authorization: Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFkNjJmNWRjLTkyZjgtNGJjNC04ZmU0LTBmN2U0MzQ2ODg1NyIsImZpcnN0TmFtZSI6IkFETUlOIiwibGFzdE5hbWUiOiJBRE1JTiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNDk5MDMwMH0.jbtLId_PtuWaKWYJaH1YQbhlNU5X1MoLiLrbIkeITM8
 
 
+### Update user
+PATCH http://localhost:4004/users/Users(069b930f-3cf4-4e21-931d-54b5385a7558)
+Content-Type: application/json
+Authorization: Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFkNjJmNWRjLTkyZjgtNGJjNC04ZmU0LTBmN2U0MzQ2ODg1NyIsImZpcnN0TmFtZSI6IkFETUlOIiwibGFzdE5hbWUiOiJBRE1JTiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNDk5MDMwMH0.jbtLId_PtuWaKWYJaH1YQbhlNU5X1MoLiLrbIkeITM8
 
+{
+  "firstName": "Jude",
+  "lastName": "Nyahe",
+  "password": "JudeNyahe",
+  "email": "jude@nyahe.com"
+}
 
 ## VENDOR
 
@@ -26,7 +57,7 @@ Authorization: Basic user:user1234
 ### Admin add user
 POST http://localhost:4004/users/Users
 Content-Type: application/json
-Authorization: Basic admin:admin1234
+Authorization: Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFkNjJmNWRjLTkyZjgtNGJjNC04ZmU0LTBmN2U0MzQ2ODg1NyIsImZpcnN0TmFtZSI6IkFETUlOIiwibGFzdE5hbWUiOiJBRE1JTiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNDk5MDMwMH0.jbtLId_PtuWaKWYJaH1YQbhlNU5X1MoLiLrbIkeITM8
 
 {
   "firstName": "Kamala",
@@ -35,6 +66,10 @@ Authorization: Basic admin:admin1234
 }
 
 
+### Get users
+GET http://localhost:4004/users/Users
+Content-Type: application/json
+Authorization: Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFkNjJmNWRjLTkyZjgtNGJjNC04ZmU0LTBmN2U0MzQ2ODg1NyIsImZpcnN0TmFtZSI6IkFETUlOIiwibGFzdE5hbWUiOiJBRE1JTiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNDk5MDMwMH0.jbtLId_PtuWaKWYJaH1YQbhlNU5X1MoLiLrbIkeITM8
 
 
 

@@ -1,6 +1,6 @@
-using ecommerce as my  from '../db/schema';
+using ecommerce as my  from '../../db/schema';
 
-service OrderService @(path: '/orders', requires: 'authenticated-user') {
+service CartService @(path: '/cart') {
 
     entity Orders as projection on my.Orders;
     @readonly entity Users as projection on my.Users;
