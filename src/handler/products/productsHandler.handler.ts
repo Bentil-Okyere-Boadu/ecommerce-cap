@@ -10,7 +10,6 @@ export class ProductsHandler {
 
     public async createProduct(@Srv() srv: any, @Req() req: Request) {
         try {
-            console.log(req.query)
             const { name, price, category } = req.data;
 
             if(!name || !price || !category) {
