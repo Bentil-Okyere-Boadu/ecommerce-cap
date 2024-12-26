@@ -7,11 +7,4 @@ service CartService @(path: '/cart') {
     entity Cart as projection on my.Cart;
     entity Products as projection on my.Products;   
 
-    // Add product to cart
-    // this.on('addToCart', (req: Request) => {
-    //     const data = req.data;
-    // }) 
-
-    // Remove product from cart
-    // this.on('removeFromCart', (req: Request) => {}) 
 }

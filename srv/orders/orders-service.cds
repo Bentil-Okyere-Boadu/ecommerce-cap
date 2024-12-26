@@ -4,7 +4,9 @@ service OrderService @(path: '/orders') {
 
     entity Orders as projection on my.Orders;
     @readonly entity Users as projection on my.Users;
-    entity Cart as projection on my.Cart;
-    @readonly entity Products as projection on my.Products;   
+    @readonly entity Cart as projection on my.Cart;
+
+    action getUserOrders(user_ID: String, status: String) returns String;
+    action createOrder(ID: String, status: String) returns String;
 
 }

@@ -2,17 +2,29 @@
 ### Get Products
 GET http://localhost:4004/products/Products
 
-### Create Product
-POST http://localhost:4004/products/createProduct
+## Orders
+### Create new order
+POST http://localhost:4004/orders/createOrder
 Content-Type: application/json
 Authorization: Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFkNjJmNWRjLTkyZjgtNGJjNC04ZmU0LTBmN2U0MzQ2ODg1NyIsImZpcnN0TmFtZSI6IkFETUlOIiwibGFzdE5hbWUiOiJBRE1JTiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNDk5MDMwMH0.jbtLId_PtuWaKWYJaH1YQbhlNU5X1MoLiLrbIkeITM8
 
 {
-    "name": "Golden Tree",
-    "price": 50,
-    "category": "Chocolate"
+  "ID": "0de044d7-fb16-45dc-a7cc-ffc87334ca9d",
+  "status": "New"
 }
 
+### Get user orders
+GET http://localhost:4004/orders/getUserOrders
+Content-Type: application/json
+Authorization: Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFkNjJmNWRjLTkyZjgtNGJjNC04ZmU0LTBmN2U0MzQ2ODg1NyIsImZpcnN0TmFtZSI6IkFETUlOIiwibGFzdE5hbWUiOiJBRE1JTiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNDk5MDMwMH0.jbtLId_PtuWaKWYJaH1YQbhlNU5X1MoLiLrbIkeITM8
+
+{
+  "user_ID": "0de044d7-fb16-45dc-a7cc-ffc87334ca9d"
+}
+
+
+
+## Authentication
 ### Login
 POST http://localhost:4004/auth/login
 Content-Type: application/json
@@ -32,24 +44,23 @@ Authorization: Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFkNjJmNWRjLT
 ## USER
 
 ### Get user
-GET http://localhost:4004/users/Users(123e4567-e89b-12d3-a456-426614174003)
+GET http://localhost:4004/users/Users(0de044d7-fb16-45dc-a7cc-ffc87334ca9d)
 Content-Type: application/json
 Authorization: Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFkNjJmNWRjLTkyZjgtNGJjNC04ZmU0LTBmN2U0MzQ2ODg1NyIsImZpcnN0TmFtZSI6IkFETUlOIiwibGFzdE5hbWUiOiJBRE1JTiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNDk5MDMwMH0.jbtLId_PtuWaKWYJaH1YQbhlNU5X1MoLiLrbIkeITM8
 
 
 ### Update user
-PATCH http://localhost:4004/users/Users(069b930f-3cf4-4e21-931d-54b5385a7558)
+PATCH http://localhost:4004/users/Users(0de044d7-fb16-45dc-a7cc-ffc87334ca9d)
 Content-Type: application/json
 Authorization: Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFkNjJmNWRjLTkyZjgtNGJjNC04ZmU0LTBmN2U0MzQ2ODg1NyIsImZpcnN0TmFtZSI6IkFETUlOIiwibGFzdE5hbWUiOiJBRE1JTiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNDk5MDMwMH0.jbtLId_PtuWaKWYJaH1YQbhlNU5X1MoLiLrbIkeITM8
 
 {
-  "firstName": "Jude",
-  "lastName": "Nyahe",
-  "password": "JudeNyahe",
-  "email": "jude@nyahe.com"
+  "firstName": "Kamala",
+  "lastName": "Harris",
+  "password": "kamalaHarris",
+  "email": "kamala@harris.com",
+  "role": "user"
 }
-
-## VENDOR
 
 
 
@@ -62,12 +73,28 @@ Authorization: Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFkNjJmNWRjLT
 {
   "firstName": "Kamala",
   "lastName": "Harris",
-  "password": "kamalaHarris"
+  "password": "kamalaHarris",
+  "email": "kamala@harris.com"
 }
 
+### Create Product
+POST http://localhost:4004/products/createProduct
+Content-Type: application/json
+Authorization: Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFkNjJmNWRjLTkyZjgtNGJjNC04ZmU0LTBmN2U0MzQ2ODg1NyIsImZpcnN0TmFtZSI6IkFETUlOIiwibGFzdE5hbWUiOiJBRE1JTiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNDk5MDMwMH0.jbtLId_PtuWaKWYJaH1YQbhlNU5X1MoLiLrbIkeITM8
+
+{
+    "name": "Golden Tree",
+    "price": 50,
+    "category": "Chocolate"
+}
 
 ### Get users
 GET http://localhost:4004/users/Users
+Content-Type: application/json
+Authorization: Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFkNjJmNWRjLTkyZjgtNGJjNC04ZmU0LTBmN2U0MzQ2ODg1NyIsImZpcnN0TmFtZSI6IkFETUlOIiwibGFzdE5hbWUiOiJBRE1JTiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNDk5MDMwMH0.jbtLId_PtuWaKWYJaH1YQbhlNU5X1MoLiLrbIkeITM8
+
+### Get users
+GET http://localhost:4004/orders/Orders
 Content-Type: application/json
 Authorization: Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFkNjJmNWRjLTkyZjgtNGJjNC04ZmU0LTBmN2U0MzQ2ODg1NyIsImZpcnN0TmFtZSI6IkFETUlOIiwibGFzdE5hbWUiOiJBRE1JTiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNDk5MDMwMH0.jbtLId_PtuWaKWYJaH1YQbhlNU5X1MoLiLrbIkeITM8
 
