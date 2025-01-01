@@ -14,13 +14,9 @@ Authorization: Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFkNjJmNWRjLT
 }
 
 ### Get user orders
-GET http://localhost:4004/orders/getUserOrders
+GET http://localhost:4004/orders/UserOrders(223e4567-e89b-12d3-a456-426655440000)
 Content-Type: application/json
 Authorization: Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFkNjJmNWRjLTkyZjgtNGJjNC04ZmU0LTBmN2U0MzQ2ODg1NyIsImZpcnN0TmFtZSI6IkFETUlOIiwibGFzdE5hbWUiOiJBRE1JTiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNDk5MDMwMH0.jbtLId_PtuWaKWYJaH1YQbhlNU5X1MoLiLrbIkeITM8
-
-{
-  "user_ID": "0de044d7-fb16-45dc-a7cc-ffc87334ca9d"
-}
 
 
 
