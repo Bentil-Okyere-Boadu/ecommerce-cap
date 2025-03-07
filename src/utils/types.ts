@@ -1,3 +1,5 @@
+import { Request } from 'express';
+
 export type User = {
     ID: string;
     firstName: string;
@@ -20,6 +22,11 @@ export type Product = {
     category: string;
 }
 
+export type CustomRequest = Request & 
+{ 
+    user: User, 
+    tenant?: string 
+};
 
 export enum OrderStatus {
     Active = 'Active',

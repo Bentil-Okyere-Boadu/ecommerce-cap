@@ -94,8 +94,22 @@ GET http://localhost:4004/orders/Orders
 Content-Type: application/json
 Authorization: Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFkNjJmNWRjLTkyZjgtNGJjNC04ZmU0LTBmN2U0MzQ2ODg1NyIsImZpcnN0TmFtZSI6IkFETUlOIiwibGFzdE5hbWUiOiJBRE1JTiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNDk5MDMwMH0.jbtLId_PtuWaKWYJaH1YQbhlNU5X1MoLiLrbIkeITM8
 
+# ### Get carts
+# GET http://localhost:4004/cart/Cart
+# Content-Type: application/json
+# Authorization: Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFkNjJmNWRjLTkyZjgtNGJjNC04ZmU0LTBmN2U0MzQ2ODg1NyIsImZpcnN0TmFtZSI6IkFETUlOIiwibGFzdE5hbWUiOiJBRE1JTiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNDk5MDMwMH0.jbtLId_PtuWaKWYJaH1YQbhlNU5X1MoLiLrbIkeITM8
 
 
+# ### Add to Cart
+# POST http://localhost:4004/cart/addToCart
+# Content-Type: application/json
+# Authorization: Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFkNjJmNWRjLTkyZjgtNGJjNC04ZmU0LTBmN2U0MzQ2ODg1NyIsImZpcnN0TmFtZSI6IkFETUlOIiwibGFzdE5hbWUiOiJBRE1JTiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNDk5MDMwMH0.jbtLId_PtuWaKWYJaH1YQbhlNU5X1MoLiLrbIkeITM8
+
+# {
+#     "orderId": "",
+#     "productId": "846ffdbc-346a-48e8-912c-33144734b729",
+#     "quantity": 2
+# }
 
 
 

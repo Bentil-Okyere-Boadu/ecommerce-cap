@@ -40,7 +40,7 @@ export class OrderHandler {
 
             if(user_ID) {
                 // Add JOINs to this query to get the list of products in the carts for the orders.
-                const orders = await SELECT.one.from(Order.name).where({user_ID});
+                const orders = await SELECT.from(Order.name).where({user_ID});
 
                 if(orders) {
                     return {

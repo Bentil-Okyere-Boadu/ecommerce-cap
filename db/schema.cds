@@ -37,11 +37,12 @@ entity Orders : managed  {
     key ID: UUID;
     user: Association to Users;
     status: OrderStatus;
+    cart: Association to many Cart on cart.order = $self;
 }
 
-entity Cart : managed {
+entity Cart {
     order: Association to Orders;
-    product: Composition of many Products;
+    product: Association to Products on product.ID = $self;
     quantity: Integer;
 }
 
