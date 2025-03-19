@@ -40,7 +40,8 @@
     "build:ts": "npx tsc",
     "build:cds": "cds build --production",
     "cleanup:ts": "npx rimraf -v -g gen/srv/srv/**/*.ts",
-    "deploy": "npm i && npm run build-mta && cf deploy gen/mta.tar --delete-services --abort-on-error && npm i"
+    "deploy": "npm i && npm run build-mta && cf deploy gen/mta.tar --delete-services --abort-on-error && npm i",
+    "cf-login": "cf login -a https://api.cf.us10-001.hana.ondemand.com --sso"
   },
   "imports": {
     "#cds-models/*": "./@cds-models/*/index.js"
